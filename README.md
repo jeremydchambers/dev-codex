@@ -28,6 +28,12 @@ dev-codex/
 | Node | Description |
 |------|-------------|
 | [Azure Key Vault Secrets](azure-key-vault-secrets/) | .NET console app reads a Secret via `SecretClient` + `DefaultAzureCredential`. |
+| [Azure Functions — Triggers & Bindings](azure-functions-triggers-bindings/) | Trigger/binding model: HTTP, Timer, Service Bus, Queue, Blob; input vs output. |
+| [Azure Functions — Hosting Plans](azure-functions-hosting-plans/) | Consumption / Flex / Premium / Dedicated and cold-start trade-offs. |
+| [Azure Functions — Isolated Worker](azure-functions-isolated-worker/) | .NET isolated vs in-process; why isolated is the default. |
+| [Azure Functions — Durable (Conceptual)](azure-functions-durable/) | Orchestrator / activity / entity, fan-out/fan-in, when to use Durable. |
+| [Azure Functions — Practice](azure-functions-practice/) | .NET isolated HTTP + Service Bus app with DI, ILogger, app settings, Flex deploy. |
+| [Azure Functions — Best Practices](azure-functions-best-practices/) | Functions vs API endpoint; series checklist and cross-cutting tips. |
 | _MVC Todo App_ | A basic CRUD app demonstrating the MVC pattern. |
 | _Extension Methods_ | Examples of extending existing types cleanly. |
 | _Repository Design Pattern_ | Abstracting data access behind a repository. |

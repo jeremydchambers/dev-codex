@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AzureFunctionsPractice.Tests/AzureFunctionsPractice.Tests.csproj" />
+  <Project Path="AzureFunctionsPractice/AzureFunctionsPractice.csproj" />
+</Solution>

@@ -17,3 +17,4 @@ evolves. Each ADR is a short, dated record: **context → decision → consequen
 | [0001](0001-node-based-structure.md) | Node-based repository structure | Accepted |
 | [0002](0002-project-vs-node-responsibilities.md) | Project-level vs node-level responsibilities | Accepted |
 | [0003](0003-project-level-agent-skills.md) | Project-level agent skills | Accepted |
+| [0004](0004-azure-functions-series.md) | Azure Functions learning series (six nodes) | Accepted |
