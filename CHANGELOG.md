@@ -9,6 +9,9 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Azure Functions learning series (ADR 0004): six `azure-functions-*` nodes —
+  triggers/bindings, hosting plans, isolated worker, Durable (conceptual),
+  practice (HTTP + Service Bus, Flex Consumption + MI), and best practices.
 - `azure-key-vault-secrets` node — .NET 10 console app reads a Secret from Azure
   Key Vault with `SecretClient` and `DefaultAzureCredential` (RBAC runbook;
   value presence checked, never printed).
