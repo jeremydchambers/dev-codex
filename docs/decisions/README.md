@@ -18,3 +18,5 @@ evolves. Each ADR is a short, dated record: **context → decision → consequen
 | [0002](0002-project-vs-node-responsibilities.md) | Project-level vs node-level responsibilities | Accepted |
 | [0003](0003-project-level-agent-skills.md) | Project-level agent skills | Accepted |
 | [0004](0004-azure-functions-series.md) | Azure Functions learning series (six nodes) | Accepted |
+| [0005](0005-azure-service-bus-series.md) | Azure Service Bus learning series (five nodes) | Accepted |
+| [0006](0006-azure-service-bus-practice-details.md) | Azure Service Bus practice delivery details | Accepted |

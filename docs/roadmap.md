@@ -22,6 +22,8 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 - `azure-key-vault-secrets` node (.NET Key Vault Secret read + RBAC runbook).
 - Azure Functions series (ADR 0004): triggers, hosting, isolated worker, Durable
   concepts, practice app, best practices.
+- Azure Service Bus series (ADR 0005): why-messaging, queues-topics, reliability,
+  sessions, practice (.NET 10 isolated).
 
 ## Ideas / backlog
 

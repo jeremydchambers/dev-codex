@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AzureServiceBusPractice.Tests/AzureServiceBusPractice.Tests.csproj" />
+  <Project Path="AzureServiceBusPractice/AzureServiceBusPractice.csproj" />
+</Solution>
