@@ -1,0 +1,24 @@
+{
+  "name": "dev-codex",
+  "version": "1.0.0",
+  "description": "A curated collection of my software development knowledge, patterns, and best practices — reference implementations for learning and reuse.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremydchambers/dev-codex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jeremydchambers/dev-codex/issues"
+  },
+  "homepage": "https://github.com/jeremydchambers/dev-codex#readme"
+}
