@@ -9,6 +9,8 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 
 ## Planned
 
+- Azure Service Bus series (ADR 0005): why-messaging, queues-topics, reliability,
+  sessions, practice (.NET 10 isolated).
 - _MVC Todo App_ node — basic CRUD demonstrating the MVC pattern.
 - _Extension Methods_ node — extending existing types cleanly.
 - _Repository Design Pattern_ node — abstracting data access behind a repository.
