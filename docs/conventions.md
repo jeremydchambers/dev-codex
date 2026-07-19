@@ -25,6 +25,25 @@ Each node is a self-contained top-level folder:
 3. **Key ideas** — the takeaways.
 4. **How to run / use** — steps or commands, if applicable.
 
+Optional extra sections (`## Series`, `## References`, `## Layout`, etc.) are fine
+when they help the reader; they do not replace the four sections above.
+
+## Multi-node series
+
+When one topic is too broad for a single readable node, split it into several
+top-level nodes that share a naming prefix and an ordered learning path
+(see [ADR 0004](decisions/0004-azure-functions-series.md)).
+
+- **Still one concept per folder.** Each series member is a normal independent
+  node with its own README (and code, if any).
+- **Links only.** Series navigation may link sibling nodes; do **not** add
+  cross-node code imports.
+- **Series nav in each README.** Include a short `## Series` block (ordered
+  list + prev/next) so readers can walk the path without relying on the root
+  Index alone.
+- **Index lists every member.** Each series node gets its own row in the root
+  Index — do not collapse a series into one Index entry or one fat folder.
+
 ## Root README index
 
 The root `README.md` maintains an **Index** table of all nodes. Update it whenever a
