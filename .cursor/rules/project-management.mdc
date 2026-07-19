@@ -1,0 +1,19 @@
+---
+description: Guardrails for project-level management docs (roadmap, conventions, ADRs, changelog).
+globs: docs/**,CHANGELOG.md
+alwaysApply: false
+---
+
+# Project-management docs
+
+This rule auto-attaches when editing repo-level management material. This is the
+**project tier** — it governs how the repo evolves, not any single node.
+
+- Keep node-specific implementation detail **out** of these files; link to the node instead.
+- `docs/roadmap.md` tracks planned / in-progress / done items.
+- `docs/decisions/` holds ADRs. Add a new numbered ADR (`NNNN-title.md`) for any
+  significant structural or directional decision; never rewrite history in an
+  accepted ADR — supersede it with a new one.
+- `CHANGELOG.md` is a human-readable, repo-wide log. Add an entry when a node is
+  added/removed or when project-level structure changes.
+- When a decision changes conventions, update `docs/conventions.md` and reference the ADR.

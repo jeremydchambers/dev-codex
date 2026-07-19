@@ -1,0 +1,22 @@
+---
+description: Structure and expectations for a node's own README (node-level docs).
+globs: */README.md
+alwaysApply: false
+---
+
+# Node README conventions
+
+This rule auto-attaches when editing a node's `README.md` (one level under the repo root).
+It does **not** apply to the root `README.md`.
+
+A node README documents **only that node**. It must not contain project-level planning,
+roadmap, or cross-repo decisions — those live at the repo root (see `AGENTS.md`).
+
+Include these sections:
+
+- **Title** — the concept name.
+- **What it demonstrates** — 1–3 sentences on the concept/pattern/technique.
+- **Key ideas** — the notable points a reader should take away.
+- **How to run / use** — commands or steps to try it, if applicable.
+
+Keep it focused, readable, and self-contained. Favor clarity over cleverness.
