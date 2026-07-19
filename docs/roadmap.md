@@ -17,6 +17,8 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 - Project-management scaffolding (`AGENTS.md`, `docs/`, ADRs, changelog).
 - Project-level agent skills (`.agents/skills/`, `skills-lock.json`, `docs/agents/`,
   ADR 0003).
+- `ai-workflows--ai-hero-tools` node (AI Hero main-flow crib sheet + local
+  walkthrough; companion to `/ask-matt`).
 - `azure-key-vault--secrets` node (.NET Key Vault Secret read + RBAC runbook).
 - Azure Functions series (ADR 0004): triggers, hosting, isolated worker, Durable
   concepts, practice app, best practices.
