@@ -46,7 +46,28 @@ node level answers "what does this one concept demonstrate."*
 - `docs/roadmap.md` — what's planned, in progress, and done.
 - `docs/conventions.md` — expanded conventions and node structure details.
 - `docs/decisions/` — Architecture Decision Records (ADRs), one file per significant decision.
+- `docs/agents/` — runtime config for installed agent skills (issue tracker, triage, domain).
 - `CHANGELOG.md` — repo-wide, human-readable evolution log.
+
+## Agent skills
+
+Project-level skills live under `.agents/skills/`, pinned by `skills-lock.json`.
+Install or refresh with `npx skills@latest add mattpocock/skills`. Skills are AI workflow
+config (ADR 0003), not demo nodes — do not add them to the README Index.
+
+### Issue tracker
+
+Local markdown under `.scratch/<feature-slug>/`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default five roles (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`,
+`wontfix`) recorded as each issue file's `Status:` line. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: optional root `CONTEXT.md`; ADRs in `docs/decisions/`. See
+`docs/agents/domain.md`.
 
 ## Commit style
 

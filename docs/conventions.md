@@ -39,6 +39,13 @@ See `AGENTS.md` for the quick decision rule.
 
 ## AI workflow configuration
 
-- **`AGENTS.md`** — portable, tool-agnostic source of truth (always applies).
+Three layers, from portable core to tool-specific (see ADRs 0002 and 0003):
+
+- **`AGENTS.md`** — portable, tool-agnostic source of truth (always applies). Includes
+  the `## Agent skills` summary pointing at `docs/agents/`.
+- **`.agents/skills/` + `skills-lock.json`** — project-level Agent Skills (workflows
+  such as triage, TDD, domain modeling). Install/refresh with
+  `npx skills@latest add mattpocock/skills`. Skill runtime config lives in
+  `docs/agents/`. Skills are **not** demo nodes — they stay out of the README Index.
 - **`.cursor/rules/*.mdc`** — Cursor-native layer for glob-scoped rules that Markdown
   can't express (e.g. language-specific conventions attached only to matching files).

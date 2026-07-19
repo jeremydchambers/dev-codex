@@ -5,7 +5,7 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 
 ## In progress
 
-- Project-management scaffolding (AGENTS.md, docs/, ADRs, changelog).
+- _Nothing currently tracked — promote from Planned when started._
 
 ## Planned
 
@@ -16,6 +16,9 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 ## Done
 
 - Repository scaffolding (README, LICENSE, .gitignore).
+- Project-management scaffolding (`AGENTS.md`, `docs/`, ADRs, changelog).
+- Project-level agent skills (`.agents/skills/`, `skills-lock.json`, `docs/agents/`,
+  ADR 0003).
 
 ## Ideas / backlog
 
