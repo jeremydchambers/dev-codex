@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- ADR 0007: Standard target framework for every .NET node -->
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+</Project>

@@ -34,7 +34,7 @@ One **.NET isolated** Function App with:
 
 ### Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download) (matches Flex `--runtime-version 8.0`)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download) (matches Flex `--runtime-version 10.0`)
 - [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local) (`func`)
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
 - Azurite (or another Storage emulator) for `AzureWebJobsStorage=UseDevelopmentStorage=true`
@@ -153,7 +153,7 @@ az functionapp create \
   --storage-account "$STORAGE" \
   --flexconsumption-location "$LOCATION" \
   --runtime dotnet-isolated \
-  --runtime-version 8.0
+  --runtime-version 10.0
 
 az servicebus namespace create \
   --resource-group "$RG" \
@@ -185,7 +185,7 @@ az functionapp create `
   --storage-account $STORAGE `
   --flexconsumption-location $LOCATION `
   --runtime dotnet-isolated `
-  --runtime-version 8.0
+  --runtime-version 10.0
 
 az servicebus namespace create `
   --resource-group $RG `

@@ -1,6 +1,8 @@
 # 0005. Azure Service Bus learning series (five nodes)
 
-- **Status:** Accepted
+- **Status:** Accepted — net10 vs Functions-practice net8 “intentional divergence”
+  **superseded in part by** [0007](0007-dotnet-10-repo-standard.md) (series spine
+  and queue-only practice remain)
 - **Date:** 2026-07-19
 
 ## Context

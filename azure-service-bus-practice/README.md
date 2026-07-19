@@ -153,7 +153,7 @@ $SB_NS = "sb-dev-codex-$(Get-Random)"
 $QUEUE = "orders"
 ```
 
-Create resources (Flex +.NET **10** isolated — intentional vs Functions practice’s net8):
+Create resources (Flex + .NET **10** isolated):
 
 ```bash
 az group create --name "$RG" --location "$LOCATION"

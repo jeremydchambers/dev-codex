@@ -32,6 +32,9 @@ node level answers "what does this one concept demonstrate."*
 - **Clarity over cleverness.** These are teaching/reference examples; favor readable code.
 - **Nodes stay self-contained.** No cross-node imports; no project-level docs inside a node.
 - **Keep the root index current.** When adding/removing a node, update the Index table in `README.md`.
+- **.NET nodes share one Standard target framework (`net10.0`).** Inherited from a root
+  `Directory.Build.props`; SDK pinned by root `global.json`. See ADR 0007 and
+  `docs/conventions.md`.
 
 ## How to add a new node
 

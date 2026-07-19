@@ -56,6 +56,21 @@ node is added or removed.
 
 See `AGENTS.md` for the quick decision rule.
 
+## .NET nodes (Standard target framework)
+
+Every runnable .NET Node uses the same **Standard target framework**: `net10.0`
+([ADR 0007](decisions/0007-dotnet-10-repo-standard.md)). No per-node exceptions.
+
+| Mechanism | Role |
+|-----------|------|
+| Root `Directory.Build.props` | Sets `TargetFramework` to `net10.0`; individual `.csproj` files omit it and inherit |
+| Root `global.json` | Requires a .NET 10 SDK with `rollForward: latestMajor` |
+| Node READMEs | Prerequisites say .NET 10 SDK; Azure Functions Flex demos use `--runtime-version 10.0` |
+
+Package versions stay declared per node (no central `Directory.Packages.props`).
+When copying a node out of the repo, either keep the root props/SDK files in the
+copy set or re-add an explicit `TargetFramework` to each `.csproj`.
+
 ## AI workflow configuration
 
 Three layers, from portable core to tool-specific (see ADRs 0002 and 0003):

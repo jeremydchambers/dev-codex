@@ -19,3 +19,7 @@ _Avoid_: Env var, app setting, configuration value (when meaning the Key Vault r
 **Key Vault**:
 Azure's managed vault used here specifically as the store from which the node reads Secrets.
 _Avoid_: App Configuration, Parameter Store (as synonyms for this store)
+
+**Standard target framework**:
+The single .NET target framework every runnable .NET Node in this repository must use.
+_Avoid_: Per-node framework, mixed TFMs (when meaning an intentional split)

@@ -20,3 +20,4 @@ evolves. Each ADR is a short, dated record: **context → decision → consequen
 | [0004](0004-azure-functions-series.md) | Azure Functions learning series (six nodes) | Accepted |
 | [0005](0005-azure-service-bus-series.md) | Azure Service Bus learning series (five nodes) | Accepted |
 | [0006](0006-azure-service-bus-practice-details.md) | Azure Service Bus practice delivery details | Accepted |
+| [0007](0007-dotnet-10-repo-standard.md) | .NET 10 as the repo-wide standard for .NET nodes | Accepted |

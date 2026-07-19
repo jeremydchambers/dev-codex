@@ -7,6 +7,14 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+
+- Adopt .NET 10 as the repo-wide Standard target framework for all .NET nodes
+  (ADR 0007): root `Directory.Build.props` + `global.json` (`rollForward:
+  latestMajor`), `.csproj` files inherit `net10.0`, superseding in part the net8 /
+  intentional-divergence wording in ADRs 0004 and 0005. Uplifted
+  `azure-functions-practice` prerequisites and Flex `--runtime-version` to 10.0.
+
 ### Added
 
 - Azure Service Bus learning series (ADR 0005): five `azure-service-bus-*` nodes —
