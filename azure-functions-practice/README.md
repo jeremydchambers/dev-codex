@@ -74,6 +74,12 @@ Call the HTTP function (key appears in the `func start` console):
 curl "http://localhost:7071/api/hello?name=Jeremy"
 ```
 
+PowerShell:
+
+```powershell
+Invoke-RestMethod "http://localhost:7071/api/hello?name=Jeremy"
+```
+
 Send a JSON message to your `orders` queue (Service Bus Explorer, SDK, or CLI). Expected body:
 
 ```json
@@ -96,6 +102,13 @@ Do not commit real secrets — `local.settings.json` is gitignored.
 Sign in and pick a Flex-capable region:
 
 ```bash
+az login
+az functionapp list-flexconsumption-locations --query "sort_by(@, &name)[].{Region:name}" -o table
+```
+
+PowerShell (same `az` commands):
+
+```powershell
 az login
 az functionapp list-flexconsumption-locations --query "sort_by(@, &name)[].{Region:name}" -o table
 ```
@@ -154,6 +167,38 @@ az servicebus queue create \
   --name "$QUEUE"
 ```
 
+PowerShell:
+
+```powershell
+az group create --name $RG --location $LOCATION
+
+az storage account create `
+  --name $STORAGE `
+  --location $LOCATION `
+  --resource-group $RG `
+  --sku Standard_LRS `
+  --allow-blob-public-access false
+
+az functionapp create `
+  --resource-group $RG `
+  --name $APP `
+  --storage-account $STORAGE `
+  --flexconsumption-location $LOCATION `
+  --runtime dotnet-isolated `
+  --runtime-version 8.0
+
+az servicebus namespace create `
+  --resource-group $RG `
+  --name $SB_NS `
+  --location $LOCATION `
+  --sku Basic
+
+az servicebus queue create `
+  --resource-group $RG `
+  --namespace-name $SB_NS `
+  --name $QUEUE
+```
+
 ### 4. Managed Identity + app settings
 
 ```bash
@@ -180,9 +225,11 @@ az functionapp config appsettings set \
     ServiceBusConnection__fullyQualifiedNamespace="${SB_NS}.servicebus.windows.net"
 ```
 
-PowerShell role + settings:
+PowerShell:
 
 ```powershell
+az functionapp identity assign --name $APP --resource-group $RG
+
 $principalId = az functionapp identity show -n $APP -g $RG --query principalId -o tsv
 $sbId = az servicebus namespace show -g $RG -n $SB_NS --query id -o tsv
 
@@ -205,11 +252,25 @@ cd AzureFunctionsPractice
 func azure functionapp publish "$APP"
 ```
 
+PowerShell:
+
+```powershell
+Set-Location AzureFunctionsPractice
+func azure functionapp publish $APP
+```
+
 Get a function key and call HTTP:
 
 ```bash
 KEY=$(az functionapp keys list --name "$APP" --resource-group "$RG" --query functionKeys.default -o tsv)
 curl "https://${APP}.azurewebsites.net/api/hello?name=Jeremy&code=${KEY}"
+```
+
+PowerShell:
+
+```powershell
+$KEY = az functionapp keys list -n $APP -g $RG --query functionKeys.default -o tsv
+Invoke-RestMethod "https://$APP.azurewebsites.net/api/hello?name=Jeremy&code=$KEY"
 ```
 
 Send a queue message (portal Service Bus Explorer, or):
@@ -223,6 +284,17 @@ az servicebus queue send \
   --body '{"orderId":"ORD-42","itemCount":1}'
 ```
 
+PowerShell:
+
+```powershell
+# Requires a suitable data-plane credential on your account
+az servicebus queue send `
+  --resource-group $RG `
+  --namespace-name $SB_NS `
+  --name $QUEUE `
+  --body '{"orderId":"ORD-42","itemCount":1}'
+```
+
 If `az servicebus queue send` is unavailable in your CLI version, use the portal
 explorer or a small SDK script. Confirm execution in **Log stream** or Application
 Insights.
@@ -231,6 +303,12 @@ Insights.
 
 ```bash
 az group delete --name "$RG" --yes --no-wait
+```
+
+PowerShell:
+
+```powershell
+az group delete --name $RG --yes --no-wait
 ```
 
 ## Layout
