@@ -2,14 +2,14 @@
 
 ## Series
 
-1. [Why Messaging](../azure-service-bus-why-messaging/)
-2. [Queues vs Topics](../azure-service-bus-queues-topics/)
+1. [Why Messaging](../azure-service-bus--why-messaging/)
+2. [Queues vs Topics](../azure-service-bus--queues-topics/)
 3. **Reliability** (this node)
-4. [Sessions & Competing Consumers](../azure-service-bus-sessions/)
-5. [Practice](../azure-service-bus-practice/)
+4. [Sessions & Competing Consumers](../azure-service-bus--sessions/)
+5. [Practice](../azure-service-bus--practice/)
 
-**Prev:** [← Queues vs Topics](../azure-service-bus-queues-topics/) ·
-**Next:** [Sessions & Competing Consumers →](../azure-service-bus-sessions/)
+**Prev:** [← Queues vs Topics](../azure-service-bus--queues-topics/) ·
+**Next:** [Sessions & Competing Consumers →](../azure-service-bus--sessions/)
 
 ## What it demonstrates
 
@@ -99,9 +99,9 @@ Because of at-least-once:
 
 Azure Functions Service Bus triggers use **lock-based** (PeekLock-style) receive.
 Throwing from the function abandons the message so it can retry and eventually DLQ.
-See [Practice](../azure-service-bus-practice/).
+See [Practice](../azure-service-bus--practice/).
 
 ## How to use
 
 No code in this node. Continue to
-[Sessions & Competing Consumers](../azure-service-bus-sessions/) for ordering and scale-out.
+[Sessions & Competing Consumers](../azure-service-bus--sessions/) for ordering and scale-out.

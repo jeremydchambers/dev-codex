@@ -1,7 +1,9 @@
 # 0004. Azure Functions learning series (six nodes)
 
 - **Status:** Accepted — TFM / `--runtime-version 8.0` bits **superseded in part by**
-  [0007](0007-dotnet-10-repo-standard.md) (series structure and Flex hosting remain)
+  [0007](0007-dotnet-10-repo-standard.md); folder path spellings **superseded in part by**
+  [0008](0008-series-topic-folder-naming.md) (`series--topic`; series spine and Flex
+  hosting remain)
 - **Date:** 2026-07-19
 
 ## Context

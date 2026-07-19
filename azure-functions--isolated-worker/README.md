@@ -2,15 +2,15 @@
 
 ## Series
 
-1. [Triggers & Bindings](../azure-functions-triggers-bindings/)
-2. [Hosting Plans](../azure-functions-hosting-plans/)
+1. [Triggers & Bindings](../azure-functions--triggers-bindings/)
+2. [Hosting Plans](../azure-functions--hosting-plans/)
 3. **Isolated Worker** (this node)
-4. [Durable Functions](../azure-functions-durable/)
-5. [Practice](../azure-functions-practice/)
-6. [Best Practices](../azure-functions-best-practices/)
+4. [Durable Functions](../azure-functions--durable/)
+5. [Practice](../azure-functions--practice/)
+6. [Best Practices](../azure-functions--best-practices/)
 
-**Prev:** [← Hosting Plans](../azure-functions-hosting-plans/) ·
-**Next:** [Durable Functions →](../azure-functions-durable/)
+**Prev:** [← Hosting Plans](../azure-functions--hosting-plans/) ·
+**Next:** [Durable Functions →](../azure-functions--durable/)
 
 ## What it demonstrates
 
@@ -51,7 +51,7 @@ flowchart TB
    host to adopt a new .NET version. That made LTS and non-LTS targets practical.
 2. **Modern .NET ecosystem fit.** Middleware, DI, configuration, and OpenTelemetry
    look like ordinary .NET worker / web apps — see
-   [Practice](../azure-functions-practice/) `Program.cs`.
+   [Practice](../azure-functions--practice/) `Program.cs`.
 3. **Extension / SDK direction.** New binding investments and samples prioritize
    `Microsoft.Azure.Functions.Worker.Extensions.*`.
 4. **Retirement clock.** In-process support ends **2026-11-10**. Greenfield code
@@ -89,7 +89,7 @@ public sealed class HelloHttp(ILogger<HelloHttp> logger)
 ## How to use
 
 No separate project here — the series practice app **is** an isolated worker project.
-Open [Practice](../azure-functions-practice/) and note:
+Open [Practice](../azure-functions--practice/) and note:
 
 - `AzureFunctionsVersion` = `v4`
 - `FUNCTIONS_WORKER_RUNTIME` = `dotnet-isolated`

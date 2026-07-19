@@ -9,6 +9,12 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Changed
 
+- Adopt `series--topic` folder naming for every on-disk Node (ADR 0008): rename
+  all Azure series folders (e.g. `azure-functions-durable` →
+  `azure-functions--durable`, `azure-key-vault-secrets` →
+  `azure-key-vault--secrets`); redefine Series in `CONTEXT.md`; update
+  conventions, Index, and Series nav links. Path lists in ADRs 0004/0005 remain
+  historical.
 - Adopt .NET 10 as the repo-wide Standard target framework for all .NET nodes
   (ADR 0007): root `Directory.Build.props` + `global.json` (`rollForward:
   latestMajor`), `.csproj` files inherit `net10.0`, superseding in part the net8 /

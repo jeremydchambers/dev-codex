@@ -2,15 +2,15 @@
 
 ## Series
 
-1. [Triggers & Bindings](../azure-functions-triggers-bindings/)
+1. [Triggers & Bindings](../azure-functions--triggers-bindings/)
 2. **Hosting Plans** (this node)
-3. [Isolated Worker](../azure-functions-isolated-worker/)
-4. [Durable Functions](../azure-functions-durable/)
-5. [Practice](../azure-functions-practice/)
-6. [Best Practices](../azure-functions-best-practices/)
+3. [Isolated Worker](../azure-functions--isolated-worker/)
+4. [Durable Functions](../azure-functions--durable/)
+5. [Practice](../azure-functions--practice/)
+6. [Best Practices](../azure-functions--best-practices/)
 
-**Prev:** [← Triggers & Bindings](../azure-functions-triggers-bindings/) ·
-**Next:** [Isolated Worker →](../azure-functions-isolated-worker/)
+**Prev:** [← Triggers & Bindings](../azure-functions--triggers-bindings/) ·
+**Next:** [Isolated Worker →](../azure-functions--isolated-worker/)
 
 ## What it demonstrates
 
@@ -101,7 +101,7 @@ quadrantChart
 ## How to use
 
 No code in this node. When you create a Function App in the
-[Practice](../azure-functions-practice/) runbook, you will use **Flex Consumption**
+[Practice](../azure-functions--practice/) runbook, you will use **Flex Consumption**
 (`az functionapp create ... --flexconsumption-location ...`) — the current default
 for new serverless apps.
 

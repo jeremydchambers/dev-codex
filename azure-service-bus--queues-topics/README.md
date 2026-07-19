@@ -2,14 +2,14 @@
 
 ## Series
 
-1. [Why Messaging](../azure-service-bus-why-messaging/)
+1. [Why Messaging](../azure-service-bus--why-messaging/)
 2. **Queues vs Topics** (this node)
-3. [Reliability](../azure-service-bus-reliability/)
-4. [Sessions & Competing Consumers](../azure-service-bus-sessions/)
-5. [Practice](../azure-service-bus-practice/)
+3. [Reliability](../azure-service-bus--reliability/)
+4. [Sessions & Competing Consumers](../azure-service-bus--sessions/)
+5. [Practice](../azure-service-bus--practice/)
 
-**Prev:** [← Why Messaging](../azure-service-bus-why-messaging/) ·
-**Next:** [Reliability →](../azure-service-bus-reliability/)
+**Prev:** [← Why Messaging](../azure-service-bus--why-messaging/) ·
+**Next:** [Reliability →](../azure-service-bus--reliability/)
 
 ## What it demonstrates
 
@@ -66,4 +66,4 @@ Practice in this series uses a **queue only**; topics stay conceptual here.
 ## How to use
 
 No code in this node. Use the rule above when sketching a design, then read
-[Reliability](../azure-service-bus-reliability/) for delivery guarantees.
+[Reliability](../azure-service-bus--reliability/) for delivery guarantees.

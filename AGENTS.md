@@ -38,7 +38,9 @@ node level answers "what does this one concept demonstrate."*
 
 ## How to add a new node
 
-1. Create a top-level folder named for the concept (kebab-case, e.g. `repository-design-pattern`).
+1. Create a top-level folder named `{series}--{topic}` (exactly one `--`; both
+   sides kebab-case, e.g. `azure-functions--durable`). Match an existing Series
+   left segment when extending a group; see ADR 0008.
 2. Add a `README.md` to that folder covering: what it demonstrates, key ideas, how to run it.
 3. Add the node to the **Index** table in the root `README.md`.
 4. Record noteworthy structural or directional decisions as an ADR in `docs/decisions/`.

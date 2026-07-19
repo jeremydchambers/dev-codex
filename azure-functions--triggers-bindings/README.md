@@ -3,13 +3,13 @@
 ## Series
 
 1. **Triggers & Bindings** (this node)
-2. [Hosting Plans](../azure-functions-hosting-plans/)
-3. [Isolated Worker](../azure-functions-isolated-worker/)
-4. [Durable Functions](../azure-functions-durable/)
-5. [Practice](../azure-functions-practice/)
-6. [Best Practices](../azure-functions-best-practices/)
+2. [Hosting Plans](../azure-functions--hosting-plans/)
+3. [Isolated Worker](../azure-functions--isolated-worker/)
+4. [Durable Functions](../azure-functions--durable/)
+5. [Practice](../azure-functions--practice/)
+6. [Best Practices](../azure-functions--best-practices/)
 
-**Next:** [Hosting Plans →](../azure-functions-hosting-plans/)
+**Next:** [Hosting Plans →](../azure-functions--hosting-plans/)
 
 ## What it demonstrates
 
@@ -66,7 +66,7 @@ flowchart LR
 | Trigger / input | Runtime *pulls* data and injects it as a parameter | “Give me this when I run” |
 | Output | Runtime *pushes* return value / attributed property | “Send this when I finish” |
 
-Example shape (isolated worker attributes — see [Practice](../azure-functions-practice/) for full projects):
+Example shape (isolated worker attributes — see [Practice](../azure-functions--practice/) for full projects):
 
 ```csharp
 // Trigger: HTTP request arrives
@@ -102,13 +102,13 @@ between systems** — “run this because something happened,” not “host my 
 product API.” Prefer a dedicated Web API (ASP.NET, App Service, Container Apps)
 when you need a rich, always-on HTTP surface, complex middleware, or long-lived
 connections. Full decision guidance lives in
-[Best Practices](../azure-functions-best-practices/).
+[Best Practices](../azure-functions--best-practices/).
 
 ## How to use
 
 There is no runnable project in this node. Read the tables and diagram, then follow
 the series into hosting and the isolated worker model. Hands-on HTTP + Service Bus
-code is in [Practice](../azure-functions-practice/).
+code is in [Practice](../azure-functions--practice/).
 
 ## References
 

@@ -9,12 +9,14 @@ and link the relevant ADR in `docs/decisions/`.
 Each node is a self-contained top-level folder:
 
 ```
-<concept-name>/
+<series>--<topic>/
 └── README.md        # required: what it demonstrates + how to use it
     ...              # source files for the concept
 ```
 
-- **Naming:** kebab-case folder names (`repository-design-pattern`).
+- **Naming:** `{series}--{topic}` with exactly one `--`
+  (e.g. `azure-functions--durable`). Both sides are required non-empty kebab-case.
+  See [ADR 0008](decisions/0008-series-topic-folder-naming.md).
 - **Independence:** no cross-node imports; a node must make sense in isolation.
 - **Docs scope:** a node documents only itself. Project-level material lives at the root.
 
@@ -28,21 +30,27 @@ Each node is a self-contained top-level folder:
 Optional extra sections (`## Series`, `## References`, `## Layout`, etc.) are fine
 when they help the reader; they do not replace the four sections above.
 
-## Multi-node series
+## Series and multi-node learning paths
+
+A **Series** is a named group of Nodes. Every Node folder uses
+`{series}--{topic}`; the left segment is the Series name. Extending a Series
+must match an existing left segment exactly (authority is on-disk names — no
+separate registry). Unbuilt Index placeholders do not invent a Series until a
+folder is created ([ADR 0008](decisions/0008-series-topic-folder-naming.md)).
 
 When one topic is too broad for a single readable node, split it into several
-top-level nodes that share a naming prefix and an ordered learning path
+top-level nodes in the same Series and optionally add an ordered learning path
 (see [ADR 0004](decisions/0004-azure-functions-series.md)).
 
-- **Still one concept per folder.** Each series member is a normal independent
+- **Still one concept per folder.** Each Series member is a normal independent
   node with its own README (and code, if any).
 - **Links only.** Series navigation may link sibling nodes; do **not** add
   cross-node code imports.
-- **Series nav in each README.** Include a short `## Series` block (ordered
-  list + prev/next) so readers can walk the path without relying on the root
-  Index alone.
-- **Index lists every member.** Each series node gets its own row in the root
-  Index — do not collapse a series into one Index entry or one fat folder.
+- **Ordered nav is optional.** When there is a teaching sequence, include a
+  short `## Series` block (ordered list + prev/next) so readers can walk the
+  path without relying on the root Index alone. `--` does not replace that nav.
+- **Index lists every member.** Each Series node gets its own row in the root
+  Index — do not collapse a Series into one Index entry or one fat folder.
 
 ## Root README index
 

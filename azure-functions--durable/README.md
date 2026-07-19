@@ -2,15 +2,15 @@
 
 ## Series
 
-1. [Triggers & Bindings](../azure-functions-triggers-bindings/)
-2. [Hosting Plans](../azure-functions-hosting-plans/)
-3. [Isolated Worker](../azure-functions-isolated-worker/)
+1. [Triggers & Bindings](../azure-functions--triggers-bindings/)
+2. [Hosting Plans](../azure-functions--hosting-plans/)
+3. [Isolated Worker](../azure-functions--isolated-worker/)
 4. **Durable Functions** (this node)
-5. [Practice](../azure-functions-practice/)
-6. [Best Practices](../azure-functions-best-practices/)
+5. [Practice](../azure-functions--practice/)
+6. [Best Practices](../azure-functions--best-practices/)
 
-**Prev:** [← Isolated Worker](../azure-functions-isolated-worker/) ·
-**Next:** [Practice →](../azure-functions-practice/)
+**Prev:** [← Isolated Worker](../azure-functions--isolated-worker/) ·
+**Next:** [Practice →](../azure-functions--practice/)
 
 ## What it demonstrates
 
@@ -89,12 +89,12 @@ minimal APIs unless the HTTP call only *starts* a long workflow.
 Orchestration state lives in a durable store (Azure Storage historically; **Durable
 Task Scheduler** is the modern recommendation for performance). Hosting still uses
 normal Functions plans (Flex / Premium / Dedicated, etc.) — see
-[Hosting Plans](../azure-functions-hosting-plans/).
+[Hosting Plans](../azure-functions--hosting-plans/).
 
 ## How to use
 
 No runnable Durable project in this node. After
-[Practice](../azure-functions-practice/), follow the Learn quickstarts below when you
+[Practice](../azure-functions--practice/), follow the Learn quickstarts below when you
 are ready to implement an orchestrator + activities.
 
 ## References

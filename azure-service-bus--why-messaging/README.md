@@ -3,12 +3,12 @@
 ## Series
 
 1. **Why Messaging** (this node)
-2. [Queues vs Topics](../azure-service-bus-queues-topics/)
-3. [Reliability](../azure-service-bus-reliability/)
-4. [Sessions & Competing Consumers](../azure-service-bus-sessions/)
-5. [Practice](../azure-service-bus-practice/)
+2. [Queues vs Topics](../azure-service-bus--queues-topics/)
+3. [Reliability](../azure-service-bus--reliability/)
+4. [Sessions & Competing Consumers](../azure-service-bus--sessions/)
+5. [Practice](../azure-service-bus--practice/)
 
-**Next:** [Queues vs Topics →](../azure-service-bus-queues-topics/)
+**Next:** [Queues vs Topics →](../azure-service-bus--queues-topics/)
 
 ## What it demonstrates
 
@@ -37,10 +37,10 @@ flowchart LR
 HTTP is a great *ingress* for “accept this request.” Messaging is the seam when
 the *work* should not share that request’s lifetime.
 
-Optional reading: the [Azure Functions series](../azure-functions-triggers-bindings/)
+Optional reading: the [Azure Functions series](../azure-functions--triggers-bindings/)
 shows how a Function host can be a consumer; this series stays **broker-first**.
 
 ## How to use
 
 No code in this node. Read the one-liner and table, then continue to
-[Queues vs Topics](../azure-service-bus-queues-topics/) for *where* messages go.
+[Queues vs Topics](../azure-service-bus--queues-topics/) for *where* messages go.

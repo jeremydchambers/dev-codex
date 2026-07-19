@@ -2,13 +2,13 @@
 
 ## Series
 
-1. [Why Messaging](../azure-service-bus-why-messaging/)
-2. [Queues vs Topics](../azure-service-bus-queues-topics/)
-3. [Reliability](../azure-service-bus-reliability/)
-4. [Sessions & Competing Consumers](../azure-service-bus-sessions/)
+1. [Why Messaging](../azure-service-bus--why-messaging/)
+2. [Queues vs Topics](../azure-service-bus--queues-topics/)
+3. [Reliability](../azure-service-bus--reliability/)
+4. [Sessions & Competing Consumers](../azure-service-bus--sessions/)
 5. **Practice** (this node)
 
-**Prev:** [← Sessions & Competing Consumers](../azure-service-bus-sessions/)
+**Prev:** [← Sessions & Competing Consumers](../azure-service-bus--sessions/)
 
 ## What it demonstrates
 
@@ -21,7 +21,7 @@ One **.NET 10 isolated** Function App that:
 - uses a **connection string** locally; optional Azure notes use **Managed Identity + RBAC**
 
 This is the series capstone. For Functions hosting/process-model depth, see the
-[Azure Functions series](../azure-functions-triggers-bindings/) (light cross-link only).
+[Azure Functions series](../azure-functions--triggers-bindings/) (light cross-link only).
 The Functions practice node stays a separate, lighter receive example.
 
 ## Key ideas
@@ -52,7 +52,7 @@ flowchart LR
 
 ### 1. Settings and tests
 
-From `azure-service-bus-practice/`:
+From `azure-service-bus--practice/`:
 
 ```bash
 cp AzureServiceBusPractice/local.settings.json.example AzureServiceBusPractice/local.settings.json

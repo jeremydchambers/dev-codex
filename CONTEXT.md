@@ -9,8 +9,8 @@ A self-contained top-level folder that demonstrates one concept, with its own `R
 _Avoid_: Project, sample, package (when meaning a demo folder)
 
 **Series**:
-An ordered set of Nodes that share a naming prefix and README Series/Prev/Next navigation.
-_Avoid_: Tutorial, track, course (when meaning this ordered node path)
+A named group of Nodes (possibly one). Nodes in a Series share a folder-name left segment before `--`. An ordered learning path with README Series/Prev/Next navigation is optional.
+_Avoid_: Tutorial, track, course (when meaning this node group); Catalog Prefix, Topic Family (when meaning Series)
 
 **Secret**:
 A named string value stored in and retrieved from Azure Key Vault (not a Key Vault cryptographic key or certificate).

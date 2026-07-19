@@ -17,9 +17,9 @@ Each concept lives in its own top-level folder with its own README explaining wh
 
 ```
 dev-codex/
-├── mvc-todo-app/
-├── extension-methods/
-├── repository-design-pattern/
+├── azure-functions--durable/
+├── azure-service-bus--why-messaging/
+├── azure-key-vault--secrets/
 └── ...
 ```
 
@@ -27,18 +27,18 @@ dev-codex/
 
 | Node | Description |
 |------|-------------|
-| [Azure Key Vault Secrets](azure-key-vault-secrets/) | .NET console app reads a Secret via `SecretClient` + `DefaultAzureCredential`. |
-| [Azure Functions — Triggers & Bindings](azure-functions-triggers-bindings/) | Trigger/binding model: HTTP, Timer, Service Bus, Queue, Blob; input vs output. |
-| [Azure Functions — Hosting Plans](azure-functions-hosting-plans/) | Consumption / Flex / Premium / Dedicated and cold-start trade-offs. |
-| [Azure Functions — Isolated Worker](azure-functions-isolated-worker/) | .NET isolated vs in-process; why isolated is the default. |
-| [Azure Functions — Durable (Conceptual)](azure-functions-durable/) | Orchestrator / activity / entity, fan-out/fan-in, when to use Durable. |
-| [Azure Functions — Practice](azure-functions-practice/) | .NET isolated HTTP + Service Bus app with DI, ILogger, app settings, Flex deploy. |
-| [Azure Functions — Best Practices](azure-functions-best-practices/) | Functions vs API endpoint; series checklist and cross-cutting tips. |
-| [Azure Service Bus — Why Messaging](azure-service-bus-why-messaging/) | Decoupling, load leveling, resilience — producers and consumers succeed independently. |
-| [Azure Service Bus — Queues vs Topics](azure-service-bus-queues-topics/) | Point-to-point vs pub/sub; one consuming app vs independent subscribers. |
-| [Azure Service Bus — Reliability](azure-service-bus-reliability/) | At-least-once, PeekLock, retries, DLQ, idempotency checklist. |
-| [Azure Service Bus — Sessions](azure-service-bus-sessions/) | Competing consumers for scale; sessions for ordered subsets. |
-| [Azure Service Bus — Practice](azure-service-bus-practice/) | .NET 10 isolated: HTTP enqueue → queue process → DLQ path; optional MI + RBAC. |
+| [Azure Key Vault Secrets](azure-key-vault--secrets/) | .NET console app reads a Secret via `SecretClient` + `DefaultAzureCredential`. |
+| [Azure Functions — Triggers & Bindings](azure-functions--triggers-bindings/) | Trigger/binding model: HTTP, Timer, Service Bus, Queue, Blob; input vs output. |
+| [Azure Functions — Hosting Plans](azure-functions--hosting-plans/) | Consumption / Flex / Premium / Dedicated and cold-start trade-offs. |
+| [Azure Functions — Isolated Worker](azure-functions--isolated-worker/) | .NET isolated vs in-process; why isolated is the default. |
+| [Azure Functions — Durable (Conceptual)](azure-functions--durable/) | Orchestrator / activity / entity, fan-out/fan-in, when to use Durable. |
+| [Azure Functions — Practice](azure-functions--practice/) | .NET isolated HTTP + Service Bus app with DI, ILogger, app settings, Flex deploy. |
+| [Azure Functions — Best Practices](azure-functions--best-practices/) | Functions vs API endpoint; series checklist and cross-cutting tips. |
+| [Azure Service Bus — Why Messaging](azure-service-bus--why-messaging/) | Decoupling, load leveling, resilience — producers and consumers succeed independently. |
+| [Azure Service Bus — Queues vs Topics](azure-service-bus--queues-topics/) | Point-to-point vs pub/sub; one consuming app vs independent subscribers. |
+| [Azure Service Bus — Reliability](azure-service-bus--reliability/) | At-least-once, PeekLock, retries, DLQ, idempotency checklist. |
+| [Azure Service Bus — Sessions](azure-service-bus--sessions/) | Competing consumers for scale; sessions for ordered subsets. |
+| [Azure Service Bus — Practice](azure-service-bus--practice/) | .NET 10 isolated: HTTP enqueue → queue process → DLQ path; optional MI + RBAC. |
 | _MVC Todo App_ | A basic CRUD app demonstrating the MVC pattern. |
 | _Extension Methods_ | Examples of extending existing types cleanly. |
 | _Repository Design Pattern_ | Abstracting data access behind a repository. |

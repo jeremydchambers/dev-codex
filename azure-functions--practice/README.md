@@ -2,15 +2,15 @@
 
 ## Series
 
-1. [Triggers & Bindings](../azure-functions-triggers-bindings/)
-2. [Hosting Plans](../azure-functions-hosting-plans/)
-3. [Isolated Worker](../azure-functions-isolated-worker/)
-4. [Durable Functions](../azure-functions-durable/)
+1. [Triggers & Bindings](../azure-functions--triggers-bindings/)
+2. [Hosting Plans](../azure-functions--hosting-plans/)
+3. [Isolated Worker](../azure-functions--isolated-worker/)
+4. [Durable Functions](../azure-functions--durable/)
 5. **Practice** (this node)
-6. [Best Practices](../azure-functions-best-practices/)
+6. [Best Practices](../azure-functions--best-practices/)
 
-**Prev:** [← Durable Functions](../azure-functions-durable/) ·
-**Next:** [Best Practices →](../azure-functions-best-practices/)
+**Prev:** [← Durable Functions](../azure-functions--durable/) ·
+**Next:** [Best Practices →](../azure-functions--best-practices/)
 
 ## What it demonstrates
 
@@ -43,7 +43,7 @@ One **.NET isolated** Function App with:
 
 ### 1. Restore settings and run tests
 
-From `azure-functions-practice/`:
+From `azure-functions--practice/`:
 
 ```bash
 cp AzureFunctionsPractice/local.settings.json.example AzureFunctionsPractice/local.settings.json

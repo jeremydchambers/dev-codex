@@ -2,14 +2,14 @@
 
 ## Series
 
-1. [Why Messaging](../azure-service-bus-why-messaging/)
-2. [Queues vs Topics](../azure-service-bus-queues-topics/)
-3. [Reliability](../azure-service-bus-reliability/)
+1. [Why Messaging](../azure-service-bus--why-messaging/)
+2. [Queues vs Topics](../azure-service-bus--queues-topics/)
+3. [Reliability](../azure-service-bus--reliability/)
 4. **Sessions & Competing Consumers** (this node)
-5. [Practice](../azure-service-bus-practice/)
+5. [Practice](../azure-service-bus--practice/)
 
-**Prev:** [← Reliability](../azure-service-bus-reliability/) ·
-**Next:** [Practice →](../azure-service-bus-practice/)
+**Prev:** [← Reliability](../azure-service-bus--reliability/) ·
+**Next:** [Practice →](../azure-service-bus--practice/)
 
 ## What it demonstrates
 
@@ -59,15 +59,15 @@ order assumptions.
 |-------------|---------|
 | Maximize throughput; messages independent | Competing consumers (no sessions) |
 | Per-key ordering / sticky processing | Sessions (`SessionId` = the key) |
-| Fan-out to different apps | Topic + subscriptions ([Queues vs Topics](../azure-service-bus-queues-topics/)) — still combine with either pattern **per subscription** |
+| Fan-out to different apps | Topic + subscriptions ([Queues vs Topics](../azure-service-bus--queues-topics/)) — still combine with either pattern **per subscription** |
 
 ### Practice note
 
-[Practice](../azure-service-bus-practice/) uses a **non-session** queue and competing
+[Practice](../azure-service-bus--practice/) uses a **non-session** queue and competing
 consumers at the Function App scale unit — enough for the HTTP → queue → process →
 DLQ loop. Sessions stay conceptual here.
 
 ## How to use
 
 No code in this node. Capstone:
-[Practice](../azure-service-bus-practice/) — enqueue via HTTP, process via queue trigger, force a DLQ path.
+[Practice](../azure-service-bus--practice/) — enqueue via HTTP, process via queue trigger, force a DLQ path.

@@ -65,7 +65,7 @@ az keyvault secret set \
 
 ### 5. Run the app
 
-From `azure-key-vault-secrets/`:
+From `azure-key-vault--secrets/`:
 
 ```bash
 export KEY_VAULT_URI="https://<your-unique-vault-name>.vault.azure.net/"

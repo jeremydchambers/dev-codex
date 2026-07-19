@@ -1,6 +1,7 @@
 # 0006. Azure Service Bus practice delivery details
 
-- **Status:** Accepted
+- **Status:** Accepted — Series glossary wording in decision §3 **superseded in part by**
+  [0008](0008-series-topic-folder-naming.md) (Series = named group; order optional)
 - **Date:** 2026-07-19
 - **Clarifies:** [0005](0005-azure-service-bus-series.md)
 
@@ -13,7 +14,7 @@ recorded so reviews don’t flag them as scope creep.
 
 ## Decision
 
-For `azure-service-bus-practice` (and related glossary):
+For `azure-service-bus--practice` (and related glossary):
 
 1. **Unit-tested services** — pure enqueue/process logic has xUnit coverage at
    service seams (same teaching pattern as Functions practice).

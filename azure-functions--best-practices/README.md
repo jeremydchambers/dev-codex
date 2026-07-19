@@ -2,14 +2,14 @@
 
 ## Series
 
-1. [Triggers & Bindings](../azure-functions-triggers-bindings/)
-2. [Hosting Plans](../azure-functions-hosting-plans/)
-3. [Isolated Worker](../azure-functions-isolated-worker/)
-4. [Durable Functions](../azure-functions-durable/)
-5. [Practice](../azure-functions-practice/)
+1. [Triggers & Bindings](../azure-functions--triggers-bindings/)
+2. [Hosting Plans](../azure-functions--hosting-plans/)
+3. [Isolated Worker](../azure-functions--isolated-worker/)
+4. [Durable Functions](../azure-functions--durable/)
+5. [Practice](../azure-functions--practice/)
 6. **Best Practices** (this node)
 
-**Prev:** [← Practice](../azure-functions-practice/)
+**Prev:** [← Practice](../azure-functions--practice/)
 
 ## What it demonstrates
 
@@ -45,15 +45,15 @@ stretching them into a full public API platform is usually the wrong shape.
 ### Series checklist (can you explain…?)
 
 - [ ] Trigger vs input vs output binding; exactly one trigger per function —
-      [Triggers & Bindings](../azure-functions-triggers-bindings/)
+      [Triggers & Bindings](../azure-functions--triggers-bindings/)
 - [ ] Consumption (legacy) vs Flex vs Premium (EP) vs Dedicated; cold-start trade-offs —
-      [Hosting Plans](../azure-functions-hosting-plans/)
+      [Hosting Plans](../azure-functions--hosting-plans/)
 - [ ] Why **isolated** is default; in-process retirement date —
-      [Isolated Worker](../azure-functions-isolated-worker/)
+      [Isolated Worker](../azure-functions--isolated-worker/)
 - [ ] Orchestrator / activity / entity; fan-out/fan-in; when Durable pays off —
-      [Durable Functions](../azure-functions-durable/)
+      [Durable Functions](../azure-functions--durable/)
 - [ ] Built HTTP + Service Bus functions with DI, `ILogger`, app settings —
-      [Practice](../azure-functions-practice/)
+      [Practice](../azure-functions--practice/)
 
 ### Reliability & ops (short list)
 
@@ -74,7 +74,7 @@ stretching them into a full public API platform is usually the wrong shape.
 - Service Bus / Storage: grant least-privilege RBAC (e.g. **Azure Service Bus Data
   Receiver** for a queue trigger).
 - Config: app settings / Key Vault references — never commit secrets (see
-  `local.settings.json` gitignore in [Practice](../azure-functions-practice/)).
+  `local.settings.json` gitignore in [Practice](../azure-functions--practice/)).
 
 ## How to use
 
