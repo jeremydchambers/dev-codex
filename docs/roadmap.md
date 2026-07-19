@@ -9,9 +9,7 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 
 ## Planned
 
-- _MVC Todo App_ node — basic CRUD demonstrating the MVC pattern.
-- _Extension Methods_ node — extending existing types cleanly.
-- _Repository Design Pattern_ node — abstracting data access behind a repository.
+- _Nothing currently planned — promote from Ideas / backlog when ready._
 
 ## Done
 

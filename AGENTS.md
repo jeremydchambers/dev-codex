@@ -76,6 +76,6 @@ Single-context: optional root `CONTEXT.md`; ADRs in `docs/decisions/`. See
 
 ## Commit style
 
-- Short, imperative subject lines (e.g. `Add repository-design-pattern node`).
+- Short, imperative subject lines (e.g. `Add azure-key-vault--secrets node`).
 - Group related changes; keep node changes and project-level changes reasonably separate.
 - Reference an ADR when a commit implements a recorded decision.
