@@ -9,6 +9,9 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- `azure-key-vault-secrets` node — .NET 10 console app reads a Secret from Azure
+  Key Vault with `SecretClient` and `DefaultAzureCredential` (RBAC runbook;
+  value presence checked, never printed).
 - Project-management scaffolding: `AGENTS.md`, `docs/` (roadmap, conventions,
   decisions), and this `CHANGELOG.md`.
 - Cursor-native rules under `.cursor/rules/` for glob-scoped guidance.

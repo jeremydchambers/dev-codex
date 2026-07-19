@@ -19,6 +19,7 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 - Project-management scaffolding (`AGENTS.md`, `docs/`, ADRs, changelog).
 - Project-level agent skills (`.agents/skills/`, `skills-lock.json`, `docs/agents/`,
   ADR 0003).
+- `azure-key-vault-secrets` node (.NET Key Vault Secret read + RBAC runbook).
 
 ## Ideas / backlog
 

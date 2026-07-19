@@ -27,6 +27,7 @@ dev-codex/
 
 | Node | Description |
 |------|-------------|
+| [Azure Key Vault Secrets](azure-key-vault-secrets/) | .NET console app reads a Secret via `SecretClient` + `DefaultAzureCredential`. |
 | _MVC Todo App_ | A basic CRUD app demonstrating the MVC pattern. |
 | _Extension Methods_ | Examples of extending existing types cleanly. |
 | _Repository Design Pattern_ | Abstracting data access behind a repository. |
