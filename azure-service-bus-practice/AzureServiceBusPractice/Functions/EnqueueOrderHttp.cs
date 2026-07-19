@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 namespace AzureServiceBusPractice.Functions;
 
 public sealed class EnqueueOrderHttp(
-    IEnqueueOrderRequestParser parser,
+    EnqueueOrderRequestParser parser,
     ILogger<EnqueueOrderHttp> logger)
 {
     [Function(nameof(EnqueueOrderHttp))]
@@ -37,13 +37,4 @@ public sealed class EnqueueOrderHttp(
             QueueMessage = parsed.MessageBody
         };
     }
-}
-
-public sealed class EnqueueOrderOutput
-{
-    [HttpResult]
-    public required IActionResult HttpResponse { get; init; }
-
-    [ServiceBusOutput("%OrdersQueueName%", Connection = "ServiceBusConnection")]
-    public string? QueueMessage { get; init; }
 }

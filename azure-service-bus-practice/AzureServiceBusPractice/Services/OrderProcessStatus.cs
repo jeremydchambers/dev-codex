@@ -1,10 +1,5 @@
 namespace AzureServiceBusPractice.Services;
 
-public interface IOrderMessageProcessor
-{
-    OrderProcessResult Process(string messageBody);
-}
-
 public enum OrderProcessStatus
 {
     Succeeded,
@@ -14,5 +9,3 @@ public enum OrderProcessStatus
     /// </summary>
     Failed
 }
-
-public sealed record OrderProcessResult(OrderProcessStatus Status, string Summary);

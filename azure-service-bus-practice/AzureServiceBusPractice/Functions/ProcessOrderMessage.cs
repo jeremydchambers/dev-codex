@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 namespace AzureServiceBusPractice.Functions;
 
 public sealed class ProcessOrderMessage(
-    IOrderMessageProcessor processor,
+    OrderMessageProcessor processor,
     ILogger<ProcessOrderMessage> logger)
 {
     /// <summary>

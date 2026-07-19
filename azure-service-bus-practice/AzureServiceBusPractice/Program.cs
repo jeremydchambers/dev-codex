@@ -8,7 +8,7 @@ var builder = FunctionsApplication.CreateBuilder(args);
 
 builder.ConfigureFunctionsWebApplication();
 
-builder.Services.AddSingleton<IEnqueueOrderRequestParser, EnqueueOrderRequestParser>();
-builder.Services.AddSingleton<IOrderMessageProcessor, OrderMessageProcessor>();
+builder.Services.AddSingleton<EnqueueOrderRequestParser>();
+builder.Services.AddSingleton<OrderMessageProcessor>();
 
 builder.Build().Run();

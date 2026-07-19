@@ -1,5 +1,3 @@
-using System.Text.Json;
-
 namespace AzureServiceBusPractice.Services;
 
 /// <summary>
@@ -10,58 +8,25 @@ namespace AzureServiceBusPractice.Services;
 /// record "already processed" before side effects, or make side effects idempotent;
 /// treat redelivery as normal. This demo does not persist processed ids.
 /// </summary>
-public sealed class OrderMessageProcessor : IOrderMessageProcessor
+public sealed class OrderMessageProcessor
 {
-    private static readonly JsonSerializerOptions JsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true
-    };
-
     public OrderProcessResult Process(string messageBody)
     {
-        if (string.IsNullOrWhiteSpace(messageBody))
+        var read = OrderMessageJson.Read(messageBody);
+        if (!read.Succeeded || read.Document is null)
+        {
+            return new OrderProcessResult(OrderProcessStatus.Failed, read.Error);
+        }
+
+        if (read.Document.SimulateFailure)
         {
             return new OrderProcessResult(
                 OrderProcessStatus.Failed,
-                "Message body is empty.");
+                $"Simulated failure for order '{read.Document.OrderId}' (simulateFailure=true).");
         }
 
-        OrderMessage? order;
-        try
-        {
-            order = JsonSerializer.Deserialize<OrderMessage>(messageBody, JsonOptions);
-        }
-        catch (JsonException)
-        {
-            return new OrderProcessResult(
-                OrderProcessStatus.Failed,
-                "Message body is not valid JSON.");
-        }
-
-        if (order is null || string.IsNullOrWhiteSpace(order.OrderId))
-        {
-            return new OrderProcessResult(
-                OrderProcessStatus.Failed,
-                "Message is missing required OrderId.");
-        }
-
-        if (order.SimulateFailure)
-        {
-            return new OrderProcessResult(
-                OrderProcessStatus.Failed,
-                $"Simulated failure for order '{order.OrderId.Trim()}' (simulateFailure=true).");
-        }
-
-        var itemCount = order.ItemCount is > 0 ? order.ItemCount.Value : 0;
         return new OrderProcessResult(
             OrderProcessStatus.Succeeded,
-            $"Accepted order '{order.OrderId.Trim()}' with {itemCount} item(s).");
-    }
-
-    private sealed class OrderMessage
-    {
-        public string? OrderId { get; set; }
-        public int? ItemCount { get; set; }
-        public bool SimulateFailure { get; set; }
+            $"Accepted order '{read.Document.OrderId}' with {read.Document.ItemCount} item(s).");
     }
 }

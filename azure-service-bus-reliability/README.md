@@ -35,10 +35,39 @@ If the process dies mid-work under ReceiveAndDelete, the message is already gone
 
 ### Retries and back-off
 
-When a PeekLock holder abandons (or the lock expires), the message becomes
-available again. Delivery count increases. Pair broker retries with cautious
-app-level back-off for transient downstream faults — but remember the broker is
-already redelivering.
+Treat **broker redelivery** and **app-level retries** as different levers.
+
+**Broker redelivery (automatic):** When a PeekLock holder abandons (or the lock
+expires), Service Bus makes the message available again and increments delivery
+count. You do **not** choose the delay between those deliveries in application
+code — the broker owns redelivery. After **MaxDeliveryCount**, the message goes
+to the DLQ.
+
+**App-level back-off (your outbound calls):** While you *hold* the lock, you may
+retry transient failures against a dependency (HTTP 429/503, brief SQL blips):
+
+1. Use a short, capped exponential back-off (e.g. 200ms → 400ms → 800ms) with a
+   small max attempts **inside** the current delivery.
+2. Prefer cancelling / failing fast if back-off would outlast the remaining lock
+   duration — then abandon (or let the lock expire) so another delivery can retry
+   later, rather than holding a message while sleeping for minutes.
+3. Do **not** infinite-loop retries in the consumer; poison traffic belongs on
+   the DLQ after MaxDeliveryCount.
+4. For permanent failures (bad payload, business rule reject), prefer fail/abandon
+   (or explicit dead-letter) over retrying forever.
+
+```mermaid
+flowchart TD
+  D[Delivery under PeekLock] --> W[Do work / call downstream]
+  W -->|success| C[Complete]
+  W -->|transient fault| B{Attempts left and lock time OK?}
+  B -->|yes| S[Short back-off] --> W
+  B -->|no| A[Abandon → broker redelivery or DLQ]
+  W -->|permanent fault| A
+```
+
+Pair both layers with idempotency: broker redelivery **will** happen; app
+back-off only reduces how often you hammer a sick dependency on *this* attempt.
 
 ### Dead-letter queue (DLQ)
 
