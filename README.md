@@ -38,11 +38,22 @@ dev-codex/
 2. Open that folder's `README.md` for an explanation and usage notes.
 3. Copy, adapt, or learn from the code as needed.
 
+## Project Management
+
+Repo-wide planning, tracking, and decisions live at the project level — not inside nodes:
+
+- [`docs/roadmap.md`](docs/roadmap.md) — what's planned, in progress, and done.
+- [`docs/decisions/`](docs/decisions/) — Architecture Decision Records (ADRs).
+- [`docs/conventions.md`](docs/conventions.md) — expanded conventions and node structure.
+- [`CHANGELOG.md`](CHANGELOG.md) — repo-wide evolution log.
+- [`AGENTS.md`](AGENTS.md) — portable guidance for AI-assisted work (with Cursor-native rules in `.cursor/rules/`).
+
 ## Conventions
 
 - One concept per folder.
 - Every folder includes its own `README.md`.
 - Code favors clarity over cleverness — these are teaching/reference examples.
+- **Nodes stay self-contained**: a node documents only itself. All project-level planning, decisions, and change tracking live at the repo root (see [Project Management](#project-management)).
 
 ## Author
 

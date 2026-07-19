@@ -1,0 +1,16 @@
+---
+description: C# style conventions for nodes that use C#/.NET.
+globs: **/*.cs
+alwaysApply: false
+---
+
+# C# conventions
+
+Auto-attaches only inside C# files, so this guidance never leaks into non-C# nodes.
+(This is an example of the Cursor-native scoping layer described in `AGENTS.md`.)
+
+- Prefer clear, self-documenting names over comments.
+- Use file-scoped namespaces and modern C# features where they aid readability.
+- Keep demo code minimal: show the concept, avoid unrelated abstractions.
+- One public concept per file where practical.
+- Include a short usage example (test, `Program.cs`, or README snippet) so the node runs.
