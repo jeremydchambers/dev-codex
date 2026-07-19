@@ -27,7 +27,7 @@ dev-codex/
 
 | Node | Description |
 |------|-------------|
-| [AI Workflows — AI Hero Tools](ai-workflows--ai-hero-tools/) | Crib sheet for Matt Pocock’s AI Hero skills: idea→ship map + local-repo walkthrough; defers routing to `/ask-matt`. |
+| [AI Workflows — AI Hero Tools](ai-workflows--ai-hero-tools/) | Cheat sheet for Matt Pocock’s AI Hero skills: idea→ship map + local-repo walkthrough; defers routing to `/ask-matt`. |
 | [Azure Key Vault Secrets](azure-key-vault--secrets/) | .NET console app reads a Secret via `SecretClient` + `DefaultAzureCredential`. |
 | [Azure Functions — Triggers & Bindings](azure-functions--triggers-bindings/) | Trigger/binding model: HTTP, Timer, Service Bus, Queue, Blob; input vs output. |
 | [Azure Functions — Hosting Plans](azure-functions--hosting-plans/) | Consumption / Flex / Premium / Dedicated and cold-start trade-offs. |
