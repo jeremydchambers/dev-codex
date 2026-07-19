@@ -9,6 +9,9 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Azure Service Bus learning series (ADR 0005): five `azure-service-bus-*` nodes —
+  why-messaging, queues-topics, reliability, sessions, and practice (.NET 10
+  isolated HTTP → queue → DLQ).
 - Azure Functions learning series (ADR 0004): six `azure-functions-*` nodes —
   triggers/bindings, hosting plans, isolated worker, Durable (conceptual),
   practice (HTTP + Service Bus, Flex Consumption + MI), and best practices.
