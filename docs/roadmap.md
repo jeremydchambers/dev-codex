@@ -13,6 +13,7 @@ codex evolves, not the internals of any single node. Keep it lightweight and cur
 
 ## Done
 
+- `patterns--result` node (`Result` / `Result<T>` control-flow utility + demo).
 - Repository scaffolding (README, LICENSE, .gitignore).
 - Project-management scaffolding (`AGENTS.md`, `docs/`, ADRs, changelog).
 - Project-level agent skills (`.agents/skills/`, `skills-lock.json`, `docs/agents/`,

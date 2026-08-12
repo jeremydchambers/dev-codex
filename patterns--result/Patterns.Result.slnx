@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Patterns.Result/Patterns.Result.csproj" />
+  <Project Path="Patterns.Result.Demo/Patterns.Result.Demo.csproj" />
+</Solution>

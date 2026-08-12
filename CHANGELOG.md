@@ -23,6 +23,8 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- `patterns--result` node — C# `Result` / `Result<T>` control-flow utility
+  with thin console demo (`Patterns.Result` + `Patterns.Result.Demo`).
 - `ai-workflows--ai-hero-tools` node — human crib sheet for the AI Hero
   idea→ship skill path (companion to `/ask-matt`; no skill-doc rewrite).
 - Azure Service Bus learning series (ADR 0005): five `azure-service-bus-*` nodes —
