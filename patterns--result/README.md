@@ -3,8 +3,8 @@
 ## What it demonstrates
 
 A small C# `Result` / `Result<T>` kit for returning success or failure from
-operations so callers branch on `IsSuccess` / `IsFailure` (and `Status` /
-`Problems`) instead of driving control flow with exceptions.
+operations so callers branch on `IsSuccess` / `IsFailure` (and `Error`) instead
+of driving control flow with exceptions.
 
 ## Key ideas
 
@@ -12,10 +12,8 @@ operations so callers branch on `IsSuccess` / `IsFailure` (and `Status` /
   outcomes (not found, validation failure, conflict, and so on).
 - Branch on `IsSuccess` / `IsFailure`, or use `Map` to fold both paths into one
   value.
-- Attach structured `IProblem` details on failure; keep status explicit via
-  `ResultStatus`.
-- `ToStatusCode()` / `StatusCode()` map statuses to conventional HTTP codes when
-  you bridge to an API layer — the library itself has no ASP.NET dependency.
+- A failure carries one `Error` string. Structured problem types can wait until
+  you copy the folder and need them.
 
 ## How to run
 
@@ -42,7 +40,7 @@ Result<User> result = LookupUser(id);
 
 if (result.IsFailure)
 {
-    // inspect result.Status and result.Problems
+    // inspect result.Error
     return;
 }
 
@@ -53,6 +51,7 @@ User user = result.Value;
 
 | Path | Role |
 |------|------|
-| `Patterns.Result/` | Result kit (types + extensions) |
-| `Patterns.Result.Demo/` | Thin console showing success/failure branching |
+| `Patterns.Result/Result.cs` | No-value `Result` |
+| `Patterns.Result/ResultOfT.cs` | `Result<T>` |
+| `Patterns.Result.Demo/` | Thin console showing `Map` over success/failure |
 | `Patterns.Result.slnx` | Solution for both projects |

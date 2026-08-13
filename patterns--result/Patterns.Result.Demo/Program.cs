@@ -15,9 +15,6 @@ static class Program
         return ok.IsSuccess && missing.IsFailure ? 0 : 1;
     }
 
-    /// <summary>
-    /// Pretend lookup that returns success or failure instead of throwing.
-    /// </summary>
     static Result<User> LookupUser(string id)
     {
         if (id == "ada")
@@ -25,25 +22,14 @@ static class Program
             return Result<User>.Success(new User("ada", "Ada Lovelace"));
         }
 
-        return Result<User>.NotFound(
-        [
-            new Problem(nameof(id), $"No user with id '{id}'.", "user.not_found")
-        ]);
+        return Result<User>.Failure($"No user with id '{id}'.");
     }
 
     static void Print(Result<User> result)
     {
-        if (result.IsSuccess)
-        {
-            Console.WriteLine($"OK ({result.Status}): {result.Value.Name}");
-            return;
-        }
-
-        Console.WriteLine($"FAIL ({result.Status}, http={result.StatusCode()}):");
-        foreach (var problem in result.Problems)
-        {
-            Console.WriteLine($"  - {problem.Name}: {problem.Reason} [{problem.Code}]");
-        }
+        Console.WriteLine(result.Map(
+            user => $"OK: {user.Name}",
+            error => $"FAIL: {error}"));
     }
 }
 

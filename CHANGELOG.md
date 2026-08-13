@@ -9,6 +9,8 @@ The format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Changed
 
+- Shrink `patterns--result` to a teaching kit: sibling `Result` / `Result<T>`,
+  one error string, `Map` in the demo; drop status/HTTP/`IProblem` surface.
 - Adopt `series--topic` folder naming for every on-disk Node (ADR 0008): rename
   all Azure series folders (e.g. `azure-functions-durable` →
   `azure-functions--durable`, `azure-key-vault-secrets` →
